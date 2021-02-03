@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>过年新钱预约兑换</title>
+    <link rel="stylesheet" href="./style/weui.css"/>
+    <link rel="stylesheet" href="./style/example.css"/>
+     <link href="http://cdn.bootcss.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="./style/flat-ui.css" rel="stylesheet">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style/shijian.css"/>
+</head>
+<body>
+    <div class="">
+    
+       <div class="weui_cells_title">延津邮政银行过年新钱预约兑换</div>
+       <div class="weui_cells">
+       <form id="form2">
+          <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">手机号：</label></div>
+              <div class="weui_cell_bd weui_cell_primary">
+                   <input class="weui_input" type="number" pattern="[0-9]*"  name="phone" id="phone"  placeholder="请输入手机号"/>
+              </div>          
+           </div>  
+        </form>
+        <div align="center" >
+          <div  style="width:80%" >
+              <a href="javascript:;" class="weui_btn weui_btn_primary" onclick="HoldPeople()">查询</a>
+            
+         </div>
+
+          
+           <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">状态：</label></div>
+              <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_cell_hd"><la class="weui_label" name="state"  id="state"></label></div>
+              </div>             
+              
+           </div>  
+           
+           
+           <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label" name="gtime100"  id="gtime100" >预约时间：</label></div> 
+              <div class="weui_cell_bd weui_cell_primary">
+                   <div class="weui_cell_hd"><la class="weui_labelui" name="time100"  id="time100">  </label></div>
+              </div>             
+            </div>         
+           <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">姓    名：</label></div>
+              <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_cell_hd"><la class="weui_label" name="name"  id="name">  </label></div>
+              </div>             
+              
+           </div>   
+           
+           <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">网  点：</label></div>
+              <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_cell_hd"><la class="weui_label" name="org"  id="org">  </label></div>
+              </div>             
+              
+           </div>             
+         
+     
+         <div class="" id="byair10">        
+           <div class="share mrl">
+                <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">面值类型：</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+              <div class="weui_cell_hd"><la class="weui_label">十元</label></div>
+            </div>         
+           </div>  
+           <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">预约数量：</label></div>
+              <div class="weui_cell_bd weui_cell_primary">
+                           <div class="weui_cell_hd"><la class="weui_label" name="number10"  id="number10">  </label></div>
+              </div>             
+            </div>  
+            
+                     
+           </div> 
+       </div>
+      
+         <div class="" id="byair20">         
+           <div class="share mrl">
+                <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">面值类型：</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+              <div class="weui_cell_hd"><la class="weui_label">二十元</label></div>
+            </div>         
+           </div>  
+           <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">预约数量：</label></div>
+              <div class="weui_cell_bd weui_cell_primary">
+                           <div class="weui_cell_hd"><la class="weui_label" name="number20"  id="number20">  </label></div>
+              </div>             
+            </div>  
+                    
+            
+        
+           </div> 
+       </div>
+       
+        <div class="" id="byair50">
+         
+           <div class="share mrl">
+                <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">面值类型：</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+              <div class="weui_cell_hd"><la class="weui_label">五十元</label></div>
+            </div>         
+           </div>  
+           <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">预约数量：</label></div>
+              <div class="weui_cell_bd weui_cell_primary">
+                           <div class="weui_cell_hd"><la class="weui_label" name="number50"  id="number50">  </label></div>
+              </div>             
+            </div>  
+       
+            
+            
+        
+           </div> 
+       </div>
+      
+      
+        <div class="" id="byair100">
+         
+           <div class="share mrl">
+                <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">面值类型：</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+              <div class="weui_cell_hd"><la class="weui_label">百元</label></div>
+            </div>         
+           </div>  
+           <div class="weui_cell">
+              <div class="weui_cell_hd"><label class="weui_label">预约数量：</label></div>
+              <div class="weui_cell_bd weui_cell_primary">
+                   <div class="weui_cell_hd"><la class="weui_label" name="number100"  id="number100">  </label></div>
+              </div>             
+            </div>  
+                   
+           </div> 
+       </div>
+            <div >
+              <label  name="numberid"  id="numberid"  style="display: none" >Male</label>
+              
+            </div>     
+    </div>
+        </form>
+        <div align="center" >
+          <div  style="width:80%" >
+              <a href="javascript:;" class="weui_btn weui_btn_primary" onclick="duihuanPeople()">兑换</a>
+           
+         </div>
+        
+        </div>
+   
+        
+    </div>
+ </div>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/JquerySession.js"></script>
+    <script src="./js/example.js"></script>
+    <script src="./js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	 $("#input1").shijian({
+			y:10//当前年份+10
+		})
+     $("#input2").shijian({
+			y:10//当前年份+10
+		})
+		
+	 $("#input3").shijian({
+			y:10//当前年份+10
+		})
+	 $("#input4").shijian({
+			y:10//当前年份+10
+		})
+		
+	 sjObj.defaults = {
+		type: "time",
+		Format: "yyyy-mm-dd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数  支持三种格式 dd-mm-yyyy ，mm-dd-yyyy yyyy-mm-dd
+		Order: 'yymmdd',
+		width: 60, //默认宽度
+		height: 32,//默认数值高度
+		Year: true, //是否显示年//
+		Month: true, //是否显示月//
+		Day: true, //是否显示日//
+		Hour: true, //是否显示小时
+		Minute: true, //是否显示分钟
+		Seconds: false, //是否显示秒
+		yyyy: "0000", //当前显示年
+		mm: "00", //当前显示月
+		dd: "00", //当前显示日
+		h: "00", //当前显示小时
+		m: "00", //当前显示分
+		s: "00", //当前显示秒
+		yearText: "年", //顶部时间 年单位 文字
+		monthText: "月", //顶部时间 月单位 文字
+		dayText: '日', //顶部时间 日单位 文字
+		hourText: '时', //顶部时间 时单位 文字
+		minuteText: '分', //顶部时间 分单位 文字
+		secondsText: '秒', //顶部时间 秒单位 文字
+		okText: "确认", //按钮确认键文字
+		cancelText: "取消", //按钮取消键文字
+		showNowTime: true, //是否默认显示当前时间
+		alwaysShow: false, //是否默认直接显示插件
+		timeElm: null, //放时间插件的box
+		onfun: function() { //取消改变时间时候执行事件
+		
+		},
+		okfun: function() { //确认时间时候执行事件
+
+		},
+	}
+	 function duihuanPeople()
+      {
+	   
+		// alert("保存数据成功！！！");
+		    
+		    
+		    
+		    
+		 
+		// alert(document.getElementById("numberid").innerHTML);
+		
+		// alert($("#orgid").val());
+		
+	   // alert(document.getElementById("phone").value);
+		 var data={
+				   
+				//  orgid:$("#orgid").val(),
+				  idp:document.getElementById("numberid").innerHTML
+				
+				   
+				   
+				  //  unitname1:$("#unitname1").val(),
+				  //  myselect3:$("#myselect3").val(),
+				  //  myname1:document.getElementById("myname1").value,
+				  //  phone:document.getElementById("phone").value,
+				  //  job:document.getElementById("job").value,
+				  //  sexy:$("#sexy").val(),
+				   // nation:$("#nation").val(),
+				  //  select4:$("#arrival").val(),
+				  //  select5:$("#myselect5").find("option:selected").text(),
+				  //  flight_number:document.getElementById("flight_number").value,
+				  //  input1:document.getElementById("input1").value,
+				  //  select6:$("#myselect6").find("option:selected").text(),
+				  //  trainname:$("#trainname").find("option:selected").text(),
+				  //  input2:document.getElementById("input2").value,
+				  //  backpattern:$("#backpattern").val(),
+				  //  select7:$("#myselect7").find("option:selected").text(),
+				  //  backflight:document.getElementById("backflight").value,
+				  //  input3:document.getElementById("input3").value,
+				   // select8:$("#myselect8").find("option:selected").text(),
+				   // backtrain:$("#backtrain").find("option:selected").text(),
+				  //  input4:document.getElementById("input4").value			    
+				 
+		 }
+		 
+		 submitduihundata(data);
+		  
+		  
+		  
+      // var form1=document.getElementById("form2");
+	    //form1.action="Addholdinfo";                //设置提交路径
+	    //form1.submit();      
+	    	 
+	      //<a href="javascript:linkPeople();" class="btn btn-block btn-lg btn-primary">添加会议代表</a>
+	  }
+	 
+	 function submitduihundata(data)
+	 {
+	 
+	 
+	 
+	    // alert("保存数据成功222");
+		 $.ajax({
+				type : "POST",
+				url : "updatenumberInfo",
+				data:data,
+			    dataType : "json",
+				success : function(data) {
+					//alert("success"+data.message.code);
+					//console.info(data.data.list.lenth);
+					if(data.success){
+														
+					 alert("兑换成功，欢迎下次光临");
+	        
+	                                }
+					else{
+					   alert("解析失败");
+					}
+					
+				},
+				error : function(msg) {
+					alert("网络连接失败");
+				}
+			});
+		 
+		 
+	 }
+	 		
+	 
+	 
+	 function phoneFun(phones){
+
+        var myreg = /^[1][3,4,5,7,8,9][0-9]{9}$/;
+
+    if (!myreg.test(phones)) {
+
+        console.log('手机号格式不正确')
+
+      return false;
+
+    } else {
+
+        console.log('手机号格式正确')
+
+      return true;
+
+    }
+
+}
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	  function HoldPeople()
+      {
+	   
+	  if(phoneFun(document.getElementById("phone").value))
+	   {
+	   
+	     var data={
+		 phone1:document.getElementById("phone").value
+		}
+		  
+		 submitdata(data);
+		  
+	   }
+	   else
+	   {
+	   
+	   alert("电话号码格式不正确");
+	   
+	   }
+	   
+	  }
+	 
+	 function submitdata(data)
+	 {
+	 
+	 
+	 
+	    // alert("保存数据成功222");
+		 $.ajax({
+				type : "POST",
+				url : "getnewInfo",
+				data:data,
+			    dataType : "json",
+				success : function(data) {
+					//alert("success"+data.message.code);
+					//console.info(data.data.list.lenth);
+					var org;
+			for (var i=0;i<data.length;i++)
+      		{
+      		
+      		   //alert("successyyy"+data[i].state);
+      		if(data[i].state==0)
+      		{
+      		  //alert("successyyy"+data[i].number10);
+      		      document.getElementById("state").innerHTML="未兑换";
+      		      org=data[i].orgid;
+      		      
+      		      
+      		      if(org==1)
+      		      {
+      		       document.getElementById("org").innerHTML="建设路网点";
+      		      }
+      		      else if(org==2)
+      		      {
+      		       document.getElementById("org").innerHTML="丰庄网点";
+      		      }
+      		      else if(org==3)
+      		      {
+      		       document.getElementById("org").innerHTML="王楼网点";
+      		      }
+      		      else if(org==4)
+      		      {
+      		       document.getElementById("org").innerHTML="位邱网点";
+      		      }
+      		      else if(org==5)
+      		      {
+      		       document.getElementById("org").innerHTML="司寨网点";
+      		      }
+      		      else if(org==6)
+      		      {
+      		       document.getElementById("org").innerHTML="马庄网点";
+      		      }
+      		      else if(org==7)
+      		      {
+      		       document.getElementById("org").innerHTML="东屯网点";
+      		      }
+      		      else if(org==8)
+      		      {
+      		       document.getElementById("org").innerHTML="榆林网点";
+      		      }
+      		      else if(org==9)
+      		      {
+      		       document.getElementById("org").innerHTML="胙城网点";
+      		      }
+      		      
+      		      
+      		      
+      		      
+      		      document.getElementById("name").innerHTML=data[i].name;
+      		      //document.getElementById("org").innerHTML=data[i].orgid+"张";
+      		      document.getElementById("number10").innerHTML=data[i].tennumber+"张";
+      		      document.getElementById("number20").innerHTML=data[i].twentynumber+"张";
+      		      document.getElementById("number50").innerHTML=data[i].fiftynumber+"张";
+      		      document.getElementById("number100").innerHTML=data[i].onebainumber+"张";;    		                       
+      		     document.getElementById("numberid").innerHTML=data[i].id;
+      		     
+      		      document.getElementById("time100").innerHTML=data[i].inserttime;
+      		                          
+      		     		   
+      		   		   
+      		   
+      		   
+      		   
+      		   
+      		   
+      		   
+      		}
+      		else 
+      	    {
+      		      document.getElementById("state").innerHTML="已兑换";
+      		      org=data[i].orgid;
+      		    //  alert("successyyy"+data[i].number10);
+      		      
+      		      if(org==1)
+      		      {
+      		       document.getElementById("org").innerHTML="建设路网点";
+      		      }
+      		      else if(org==2)
+      		      {
+      		       document.getElementById("org").innerHTML="丰庄网点";
+      		      }
+      		      else if(org==3)
+      		      {
+      		       document.getElementById("org").innerHTML="王楼网点";
+      		      }
+      		      else if(org==4)
+      		      {
+      		       document.getElementById("org").innerHTML="位邱网点";
+      		      }
+      		      else if(org==5)
+      		      {
+      		       document.getElementById("org").innerHTML="司寨网点";
+      		      }
+      		      else if(org==6)
+      		      {
+      		       document.getElementById("org").innerHTML="马庄网点";
+      		      }
+      		      else if(org==7)
+      		      {
+      		       document.getElementById("org").innerHTML="东屯网点";
+      		      }
+      		      else if(org==8)
+      		      {
+      		       document.getElementById("org").innerHTML="榆林网点";
+      		      }
+      		      else if(org==9)
+      		      {
+      		       document.getElementById("org").innerHTML="胙城网点";
+      		      }
+      		      
+      		      
+      		      
+      		      
+      		      document.getElementById("name").innerHTML=data[i].name;
+      		      //document.getElementById("org").innerHTML=data[i].orgid+"张";
+      		      document.getElementById("number10").innerHTML=data[i].tennumber+"张";
+      		      document.getElementById("number20").innerHTML=data[i].twentynumber+"张";
+      		      document.getElementById("number50").innerHTML=data[i].fiftynumber+"张";
+      		      document.getElementById("number100").innerHTML=data[i].onebainumber+"张";;    		                       
+      		      document.getElementById("numberid").innerHTML=data[i].id;
+      		      document.getElementById("gtime100").innerHTML="兑换时间";
+      		      document.getElementById("time100").innerHTML=data[i].getmtime;
+      		                          
+      		}
+      		
+      		
+      		
+		       // obj.options.add(new Option(data.data.list[i].trafficname,data.data.list[i].id)); 
+		   
+		   
+		    }
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				},
+				error : function(msg) {
+					alert("网络连接失败");
+				}
+			});
+		 
+		 
+	 }
+	 		
+	 
+	
+		
+</script>
+
+
+  <script type="text/javascript">
+          
+    $(document).ready(function(){  
+    	
+    	//document.getElementById('number10').innerHTML ="5655张"
+    	
+    		var data={
+				fatherid:"1"
+		}
+    	
+    //	MymubersetOption(data);
+    	//alert("success333");
+    	
+    	//Myselect3addOption(data);
+    //	Myselect5addOption(data);
+    	//Myselect6addOption(data);
+    	
+    	
+    	    	  	   	  
+    });  
+    
+      
+   
+   
+    function MymubersetOption(data) {
+    	$.ajax({
+			type : "POST",
+			url : "getnumberInfo",
+			data:data,
+		    dataType : "json",
+			success : function(data) {
+			
+			//alert("success36633" +data.length);
+			for (var i=0;i<data.length;i++)
+      		{
+      		
+      		    //alert("successyyy"+data[i].number10);
+      		if(data[i].id==1)
+      		{
+      		  //alert("successyyy"+data[i].number10);
+      		   document.getElementById("number10").innerHTML=data[i].number10+"张";
+      		}
+      		else if(data[i].id==2)
+      	    {
+      		   document.getElementById("number20").innerHTML=data[i].number10+"张";
+      		}
+      		else if(data[i].id==3)
+      	   {
+      		   document.getElementById("number50").innerHTML=data[i].number10+"张";
+      		}
+      		else if(data[i].id==4)
+      	    {
+      		   document.getElementById("number100").innerHTML=data[i].number10+"张";;
+      		}
+      		
+		       // obj.options.add(new Option(data.data.list[i].trafficname,data.data.list[i].id)); 
+		   
+		   
+		    }
+			
+			//alert("success36633"+data.list.length);
+			
+				//alert("success"+data.message.code);
+				//console.info(data.data.list.lenth);
+				if(data.success){
+				//alert("success333");
+													
+					//var obj=document.getElementById('myselect5'); 
+					 //   obj.options.length=0;					
+					    //alert("success"+data.data.list[0].trafficname);
+		     //   for (var i=0;i<data.data.list.length;i++)
+      		//	{
+				//    obj.options.add(new Option(data.data.list[i].trafficname,data.data.list[i].id)); 
+				//}
+		        
+		   // var obj1=document.getElementById('myselect7'); 
+			//obj1.options.length=0;					
+			   //alert("success"+data.data.list[0].trafficname);
+          //  for (var i=0;i<data.data.list.length;i++)
+			//{
+		         obj1.options.add(new Option(data.data.list[i].trafficname,data.data.list[i].id)); 
+		   // }
+        
+           }
+				
+				
+			},
+			error : function(msg) {
+				alert("网络连接失败");
+			}
+		});
+	} 
+    
+    
+   
+      
+    
+   
+    </script>
+    
+    
+    
+</body>
+</html>

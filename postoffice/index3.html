@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>过年新钱预约查询</title>
+	<link rel="stylesheet" href="./style/weui.css" />
+	<link rel="stylesheet" href="./style/example.css" />
+	<link href="http://cdn.bootcss.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Loading Flat UI -->
+	<link href="./style/flat-ui.css" rel="stylesheet">
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style/shijian.css" />
+</head>
+
+<body>
+	<div class="">
+		<!-- <img src="assets/img/yz.jpeg" alt="" class='yzIcon'/> -->
+		<div class="weui_cells_title">柘城邮政银行过年新钱预约信息查询</div>
+		<div class="weui_cells">
+			<form id="form2">
+				<div class="weui_cell">
+					<!-- <div class="weui_cell_hd"><label class="weui_label">手机号：</label></div> -->
+					<div class="weui_cell_bd weui_cell_primary">
+						<input class="weui_input serchInput" type="number" pattern="[0-9]*" name="phone" id="phone"
+							placeholder="请输入手机号" />
+					</div>
+				</div>
+			</form>
+			<div>
+				<div>
+					<a href="javascript:;" class="weui_btn weui_btn_primary" onclick="HoldPeople()">查询</a>
+				</div>
+				<form id="form3">
+					<div class="weui_cell">
+						<div class="weui_cell_hd"><label class="weui_label">姓 名：</label></div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<div class="weui_cell_hd">
+								<la class="weui_label" name="name" id="name"> </label>
+							</div>
+						</div>
+					</div>
+					<div class="weui_cell">
+						<div class="weui_cell_hd"><label class="weui_label">网 点：</label></div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<div class="weui_cell_hd">
+								<la class="weui_label" name="org" id="org"> </label>
+							</div>
+						</div>
+					</div>
+					<div class="weui_cell">
+						<div class="weui_cell_hd"><label class="weui_label">状态：</label></div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<div class="weui_cell_hd">
+								<la class="weui_label" name="state" id="state"></label>
+							</div>
+						</div>
+					</div>
+
+					<div class="weui_cell">
+						<div class="weui_cell_hd"><label class="weui_label" name="gtime100" id="gtime100">预约时间：</label>
+						</div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<div class="weui_cell_hd">
+								<la class="weui_labelui" name="time100" id="time100"> </label>
+							</div>
+						</div>
+					</div>
+					<div class="" id="byair10">
+						<div class="share mrl">
+							<div class="weui_cell">
+								<div class="weui_cell_hd"><label class="weui_label">面值类型：</label></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<div class="weui_cell_hd">
+										<la class="weui_label">十元</label>
+									</div>
+								</div>
+							</div>
+							<div class="weui_cell">
+								<div class="weui_cell_hd"><label class="weui_label">预约数量：</label></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<div class="weui_cell_hd">
+										<la class="weui_label" name="number10" id="number10"> </label>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="" id="byair20">
+
+						<div class="share mrl">
+							<div class="weui_cell">
+								<div class="weui_cell_hd"><label class="weui_label">面值类型：</label></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<div class="weui_cell_hd">
+										<la class="weui_label">二十元</label>
+									</div>
+								</div>
+							</div>
+							<div class="weui_cell">
+								<div class="weui_cell_hd"><label class="weui_label">预约数量：</label></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<div class="weui_cell_hd">
+										<la class="weui_label" name="number20" id="number20"> </label>
+									</div>
+								</div>
+							</div>
+
+
+
+						</div>
+					</div>
+
+					<div class="" id="byair50">
+
+						<div class="share mrl">
+							<div class="weui_cell">
+								<div class="weui_cell_hd"><label class="weui_label">面值类型：</label></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<div class="weui_cell_hd">
+										<la class="weui_label">五十元</label>
+									</div>
+								</div>
+							</div>
+							<div class="weui_cell">
+								<div class="weui_cell_hd"><label class="weui_label">预约数量：</label></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<div class="weui_cell_hd">
+										<la class="weui_label" name="number50" id="number50"> </label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="" id="byair100">
+
+						<div class="share mrl">
+							<div class="weui_cell">
+								<div class="weui_cell_hd"><label class="weui_label">面值类型：</label></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<div class="weui_cell_hd">
+										<la class="weui_label">百元</label>
+									</div>
+								</div>
+							</div>
+							<div class="weui_cell">
+								<div class="weui_cell_hd"><label class="weui_label">预约数量：</label></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<div class="weui_cell_hd">
+										<la class="weui_label" name="number100" id="number100"> </label>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+	<script src="./js/zepto.min.js"></script>
+	<script src="./js/JquerySession.js"></script>
+	<script src="./js/example.js"></script>
+	<script src="./js/jquer_shijian.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#input1").shijian({
+			y: 10//当前年份+10
+		})
+		$("#input2").shijian({
+			y: 10//当前年份+10
+		})
+
+		$("#input3").shijian({
+			y: 10//当前年份+10
+		})
+		$("#input4").shijian({
+			y: 10//当前年份+10
+		})
+
+		sjObj.defaults = {
+			type: "time",
+			Format: "yyyy-mm-dd", //显示时间格式//yyyy表示年份 ，mm月份 ，dd天数  支持三种格式 dd-mm-yyyy ，mm-dd-yyyy yyyy-mm-dd
+			Order: 'yymmdd',
+			width: 60, //默认宽度
+			height: 32,//默认数值高度
+			Year: true, //是否显示年//
+			Month: true, //是否显示月//
+			Day: true, //是否显示日//
+			Hour: true, //是否显示小时
+			Minute: true, //是否显示分钟
+			Seconds: false, //是否显示秒
+			yyyy: "0000", //当前显示年
+			mm: "00", //当前显示月
+			dd: "00", //当前显示日
+			h: "00", //当前显示小时
+			m: "00", //当前显示分
+			s: "00", //当前显示秒
+			yearText: "年", //顶部时间 年单位 文字
+			monthText: "月", //顶部时间 月单位 文字
+			dayText: '日', //顶部时间 日单位 文字
+			hourText: '时', //顶部时间 时单位 文字
+			minuteText: '分', //顶部时间 分单位 文字
+			secondsText: '秒', //顶部时间 秒单位 文字
+			okText: "确认", //按钮确认键文字
+			cancelText: "取消", //按钮取消键文字
+			showNowTime: true, //是否默认显示当前时间
+			alwaysShow: false, //是否默认直接显示插件
+			timeElm: null, //放时间插件的box
+			onfun: function () { //取消改变时间时候执行事件
+
+			},
+			okfun: function () { //确认时间时候执行事件
+
+			},
+		}
+
+		function HoldPeople() {
+			if (!document.getElementById("phone").value) {
+				alert("请输入手机号码");
+			} else if (phoneFun(document.getElementById("phone").value)) {
+				var data = {
+					phone1: document.getElementById("phone").value,
+				}
+				submitdata(data);
+			}else {
+				alert("电话号码格式不正确");
+			}
+		}
+
+		//将流转化成时间
+		function getNowFormatDate(date2) {
+			var date = new Date(date2);
+			var seperator1 = "-";
+			var seperator2 = ":";
+			var month = date.getMonth() + 1;
+			var strDate = date.getDate();
+			var hours = date.getHours();
+			var minute = date.getMinutes();
+			var second = date.getSeconds();
+			if (month >= 1 && month <= 9) {
+				month = "0" + month;
+			}
+			if (strDate >= 0 && strDate <= 9) {
+				strDate = "0" + strDate;
+			}
+			if (hours >= 0 && hours <= 9) {
+				hours = "0" + hours;
+			}
+			if (minute >= 0 && minute <= 9) {
+				minute = "0" + minute;
+			}
+			if (second >= 0 && second <= 9) {
+				second = "0" + second;
+			}
+
+			var currentdate =
+				date.getFullYear() +
+				seperator1 +
+				month +
+				seperator1 +
+				strDate +
+				" " +
+				hours +
+				seperator2 +
+				minute +
+				seperator2 +
+				second;
+			return currentdate;
+		}
+
+
+
+		function phoneFun(phones) {
+
+			var myreg = /^[1][3,4,5,7,8,9][0-9]{9}$/;
+
+			if (!myreg.test(phones)) {
+
+				console.log('手机号格式不正确')
+
+				return false;
+
+			} else {
+
+				console.log('手机号格式正确')
+
+				return true;
+
+			}
+
+		}
+		function submitdata(data) {
+			$.ajax({
+				type: "GET",
+				url: `http://122.51.140.39:2435/appointmentInfo?mobile=${data.phone1}&pageNumber=1&pageSize=10`,
+				dataType: "json",
+				success: function (res) {
+					console.log('详请:', res);
+					const { data: { list }, message, success } = res;
+					if (list && list.length > 0) {
+						const user = list[0];
+						document.getElementById("state").innerHTML = "已预约";
+						document.getElementById("org").innerHTML = user.address;
+						document.getElementById("name").innerHTML = user.username;
+						document.getElementById("number10").innerHTML = user.tenCount + "张";
+						document.getElementById("number20").innerHTML = user.twentyCount + "张";
+						document.getElementById("number50").innerHTML = user.fiftyCount + "张";
+						document.getElementById("number100").innerHTML = user.oneHundredCount + "张";
+						document.getElementById("time100").innerHTML = getNowFormatDate(user.createTime);
+					}
+				},
+				error: function (msg) {
+					alert("网络连接失败");
+				}
+			});
+
+
+		}
+
+
+
+
+	</script>
+
+
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+
+			//document.getElementById('number10').innerHTML ="5655张"
+
+			var startime1 = getQueryString('IdNumber');
+
+			console.log('IdNumber---------', IdNumber);
+			if (startime1 == "null") {
+
+
+				return;
+			}
+			else {
+				var data = {
+					phone1: startime1
+				}
+				// submitdata(data);
+			}
+
+
+
+			//	MymubersetOption(data);
+			//alert("success333");
+
+			//Myselect3addOption(data);
+			//	Myselect5addOption(data);
+			//Myselect6addOption(data);
+
+
+
+		});
+
+		function getQueryString(name) {
+			var result = window.location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+
+			if (result == null || result.length < 1) {
+				return "";
+			}
+			return result[1];
+		}
+
+
+
+
+
+
+
+		function MymubersetOption(data) {
+			$.ajax({
+				type: "POST",
+				url: "getnumberInfo",
+				data: data,
+				dataType: "json",
+				success: function (data) {
+
+					//alert("success36633" +data.length);
+					for (var i = 0; i < data.length; i++) {
+
+						//alert("successyyy"+data[i].number10);
+						if (data[i].id == 1) {
+							//alert("successyyy"+data[i].number10);
+							document.getElementById("number10").innerHTML = data[i].number10 + "张";
+						}
+						else if (data[i].id == 2) {
+							document.getElementById("number20").innerHTML = data[i].number10 + "张";
+						}
+						else if (data[i].id == 3) {
+							document.getElementById("number50").innerHTML = data[i].number10 + "张";
+						}
+						else if (data[i].id == 4) {
+							document.getElementById("number100").innerHTML = data[i].number10 + "张";;
+						}
+
+						// obj.options.add(new Option(data.data.list[i].trafficname,data.data.list[i].id)); 
+
+
+					}
+
+					//alert("success36633"+data.list.length);
+
+					//alert("success"+data.message.code);
+					//console.info(data.data.list.lenth);
+					if (data.success) {
+						//alert("success333");
+
+						//var obj=document.getElementById('myselect5'); 
+						//   obj.options.length=0;					
+						//alert("success"+data.data.list[0].trafficname);
+						//   for (var i=0;i<data.data.list.length;i++)
+						//	{
+						//    obj.options.add(new Option(data.data.list[i].trafficname,data.data.list[i].id)); 
+						//}
+
+						// var obj1=document.getElementById('myselect7'); 
+						//obj1.options.length=0;					
+						//alert("success"+data.data.list[0].trafficname);
+						//  for (var i=0;i<data.data.list.length;i++)
+						//{
+						obj1.options.add(new Option(data.data.list[i].trafficname, data.data.list[i].id));
+						// }
+
+					}
+
+
+				},
+				error: function (msg) {
+					alert("网络连接失败");
+				}
+			});
+		}
+
+
+
+
+
+
+	</script>
+
+
+
+</body>
+
+</html>
